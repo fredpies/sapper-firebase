@@ -1,0 +1,16 @@
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import '../src/postcss/fonts.pcss';
+
+.flex-full-center {
+    @apply .flex .justify-center .content-center .items-center;
+}
+
+
+
+
+
+

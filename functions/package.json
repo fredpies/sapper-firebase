@@ -1,0 +1,61 @@
+{
+  "name": "sapper-boilerplate",
+  "description": "Sapper Boilerplate",
+  "version": "0.0.1",
+  "engines": {
+    "node": "10"
+  },
+  "scripts": {
+    "dev": "sapper dev",
+    "export": "sapper export --legacy",
+    "start": "node __sapper__/build",
+    "watch:tailwind": "postcss static/tailwind.css -o static/index.css -w",
+    "build:tailwind": "postcss static/tailwind.css -o static/index.css",
+    "build": "npm run build:tailwind && sapper build --legacy",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "test": "run-p --race dev cy:run",
+    "fb:serve": "firebase serve --only functions",
+    "fb:shell": "firebase functions:shell",
+    "fb:start": "npm run shell",
+    "deploy": "npm run build && firebase deploy",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "compression": "^1.7.1",
+    "sirv": "^0.4.0",
+    "firebase-admin": "^8.6.0",
+    "firebase-functions": "^3.3.0",
+    "firebase-functions-test": "^0.1.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/runtime": "^7.0.0",
+    "@rollup/plugin-commonjs": "^11.0.0",
+    "@rollup/plugin-json": "^4.0.2",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "@rollup/plugin-replace": "^2.2.0",
+    "express": "^4.17.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^7.0.27",
+    "postcss-cli": "^7.1.0",
+    "postcss-custom-media": "^7.0.8",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-load-config": "^2.1.0",
+    "postcss-responsive-font": "^1.0.6",
+    "precss": "^4.0.0",
+    "pug": "^2.0.4",
+    "rollup": "^1.20.0",
+    "rollup-plugin-babel": "^4.0.2",
+    "rollup-plugin-svelte": "^5.0.1",
+    "rollup-plugin-terser": "^5.2.0",
+    "sapper": "^0.27.0",
+    "svelte": "^3.0.0",
+    "svelte-preprocess": "^3.4.0",
+    "tailwindcss": "^1.2.0",
+    "tailwindcss-grid": "^1.2.1"
+  }
+}
