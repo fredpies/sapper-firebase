@@ -47,7 +47,7 @@
     "postcss-load-config": "^2.1.0",
     "postcss-responsive-font": "^1.0.6",
     "precss": "^4.0.0",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "rollup": "^1.20.0",
     "rollup-plugin-babel": "^4.0.2",
     "rollup-plugin-svelte": "^5.0.1",
